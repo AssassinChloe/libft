@@ -6,7 +6,7 @@
 /*   By: cassassi <cassassi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/26 17:38:58 by cassassi          #+#    #+#             */
-/*   Updated: 2020/11/30 12:54:55 by cassassi         ###   ########.fr       */
+/*   Updated: 2021/06/10 12:33:36 by cassassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	unsigned int i;
+	unsigned int	i;
 
 	i = 0;
 	if (!(s))

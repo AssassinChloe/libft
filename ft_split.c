@@ -6,7 +6,7 @@
 /*   By: cassassi <cassassi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/26 16:22:00 by cassassi          #+#    #+#             */
-/*   Updated: 2020/11/30 12:45:54 by cassassi         ###   ########.fr       */
+/*   Updated: 2021/06/10 14:18:04 by cassassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static int	ft_strcount(const char *s, char c)
 
 static int	ft_splitlen(const char *s, char c, unsigned int *pi)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	while (s[*pi] == c)
@@ -67,7 +67,19 @@ static char	*ft_strcpy(const char *s, char c, unsigned int *pi)
 	return (str);
 }
 
-char		**ft_split(const char *s, char c)
+static char	**ft_free_tab(char **tab, int j)
+{
+	while (j > 0)
+	{
+		j--;
+		free(tab[j]);
+	}
+	free(tab);
+	tab = NULL;
+	return (tab);
+}
+
+char	**ft_split(const char *s, char c)
 {
 	char			**tab;
 	unsigned int	*pi;
@@ -87,6 +99,8 @@ char		**ft_split(const char *s, char c)
 	while (j < len)
 	{
 		tab[j] = ft_strcpy(s, c, pi);
+		if (tab[j] == NULL)
+			return (ft_free_tab(tab, j));
 		j++;
 	}
 	tab[j] = NULL;

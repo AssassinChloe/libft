@@ -6,7 +6,7 @@
 /*   By: cassassi <cassassi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/26 19:19:00 by cassassi          #+#    #+#             */
-/*   Updated: 2020/11/26 19:43:47 by cassassi         ###   ########.fr       */
+/*   Updated: 2021/06/10 12:33:08 by cassassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	long long int nb;
+	long long int	nb;
 
 	nb = n;
 	if (nb < 0)

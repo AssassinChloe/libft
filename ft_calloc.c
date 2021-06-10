@@ -6,7 +6,7 @@
 /*   By: cassassi <cassassi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 14:47:20 by cassassi          #+#    #+#             */
-/*   Updated: 2020/11/25 15:36:42 by cassassi         ###   ########.fr       */
+/*   Updated: 2021/06/10 12:29:35 by cassassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	char *i;
+	char	*i;
 
 	i = malloc(size * count);
 	if (!(i))

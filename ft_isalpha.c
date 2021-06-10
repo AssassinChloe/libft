@@ -6,7 +6,7 @@
 /*   By: cassassi <cassassi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 09:20:25 by cassassi          #+#    #+#             */
-/*   Updated: 2020/11/23 09:25:42 by cassassi         ###   ########.fr       */
+/*   Updated: 2021/06/10 12:31:07 by cassassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static int	ft_isupper(int c)
 	return (0);
 }
 
-int			ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
 	if (ft_islower(c) || ft_isupper(c))
 		return (1);
