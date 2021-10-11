@@ -1,25 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_atoll.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cassassi <cassassi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/18 17:11:55 by cassassi          #+#    #+#             */
-/*   Updated: 2021/06/10 17:22:59 by cassassi         ###   ########.fr       */
+/*   Created: 2021/07/17 17:21:28 by cassassi          #+#    #+#             */
+/*   Updated: 2021/08/05 16:40:03 by cassassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-size_t	ft_strlen(const char *s)
+long long	ft_atoll(const char *str)
 {
-	size_t	i;
+	unsigned int	i;
+	int				neg;
+	long long		nb;
 
 	i = 0;
-	while (s[i] != '\0')
+	neg = 1;
+	nb = 0;
+	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
+		i++;
+	if (str[i] == '+' || str[i] == '-')
 	{
+		if (str[i] == '-')
+			neg = -neg;
 		i++;
 	}
-	return (i);
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		nb = nb * 10 + (str[i] - '0');
+		i++;
+	}
+	return (nb * neg);
 }
